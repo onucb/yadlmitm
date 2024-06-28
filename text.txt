@@ -1,1 +1,10 @@
+#!name = Я.Музыка загрузчик
+#!desc = Установите команду, включите прокси-приложение с модулем, запустите искомый трек в Яндекс музыке, нажмите на появившееся уведомление чтобы скачать трек.
+#!icon = https://i.imgur.com/D0ulaGL.png
+#!date = 27.05.2023
 
+[Script]
+http-response get-mp3.*&play= script-path= https://raw.githubusercontent.com/onucb/yadlmitm/main/script.js, requires-body=false, timeout=10, tag= Я.Музыка загрузчик, img-url= https://i.imgur.com/D0ulaGL.png
+
+[Mitm]
+hostname = %APPEND%*.storage.yandex.net
